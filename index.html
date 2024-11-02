@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Selector UI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .language-selector {
+      font-size: 18px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      cursor: pointer;
+    }
+    select {
+      font-size: 18px;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      appearance: none; /* 隐藏默认的下拉箭头，适合自定义样式 */
+      padding-right: 30px; /* 为自定义箭头留出空间 */
+    }
+    .language-selector::after {
+      content: '▼'; /* 自定义下拉箭头 */
+      font-size: 12px;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none; /* 确保箭头不影响交互 */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="language-selector">
+    <!-- 下拉菜单 -->
+    <select>
+      <option value="en">English</option>
+      <option value="zh">中文</option>
+      <option value="fr">Français</option>
+    </select>
+  </div>
+
+</body>
+</html>
